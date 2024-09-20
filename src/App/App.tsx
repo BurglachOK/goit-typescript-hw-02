@@ -73,7 +73,7 @@ function App() {
   };
 
     const closeModal = (): void => {
-    setModal({ ...modal, isOpen: false, imgUrl: "", imgAlt: "" && "noAlt" });
+    setModal({ ...modal, isOpen: false, imgUrl: "", imgAlt: "noAlt" });
   };
 
   const openModal = (url: string, alt: string): void => {
