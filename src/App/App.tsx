@@ -71,12 +71,13 @@ function App() {
   const handleLoadMoreClick = (): void => {
     setPage((prevPage) => prevPage + 1);
   };
-  const openModal = (url: string, alt: string): void => {
-    setModal({ ...modal, isOpen: true, imgUrl: url, imgAlt: alt });
+
+    const closeModal = (): void => {
+    setModal({ ...modal, isOpen: false, imgUrl: "", imgAlt: "" && "noAlt" });
   };
 
-  const closeModal = (): void => {
-    setModal({ ...modal, isOpen: false, imgUrl: "", imgAlt: "" && "noAlt" });
+  const openModal = (url: string, alt: string): void => {
+    setModal({ ...modal, isOpen: true, imgUrl: url, imgAlt: alt });
   };
 
   return (
